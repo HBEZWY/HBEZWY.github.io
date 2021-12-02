@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Crypto,古典密码," />
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="摸鱼菜鸡的学习日记">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的古典密码总结">
+<meta property="og:url" content="http://example.com/2021/12/02/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/index.html">
 <meta property="og:site_name" content="摸鱼菜鸡的学习日记">
 <meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/12/02/n6QsGTkohbRigqL.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/12/02/3sHM1zTQjVDvOpy.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/12/02/okXDANEQigMbtFC.png">
+<meta property="article:published_time" content="2021-12-02T05:05:45.237Z">
+<meta property="article:modified_time" content="2021-12-02T05:08:34.736Z">
 <meta property="article:author" content="WY">
+<meta property="article:tag" content="Crypto">
+<meta property="article:tag" content="古典密码">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/12/02/n6QsGTkohbRigqL.jpg">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/"/>
+  <link rel="canonical" href="http://example.com/2021/12/02/古典密码/"/>
 
 
 
 
 
-  <title>摸鱼菜鸡的学习日记</title>
+  <title>常见的古典密码总结 | 摸鱼菜鸡的学习日记</title>
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +251,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/12/02/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" itemprop="url">常见的古典密码总结</a></h1>
+          <h1 class="post-title" itemprop="name headline">常见的古典密码总结</h1>
         
 
         <div class="post-meta">
@@ -350,180 +355,61 @@
       
 
       
-        
-          <p><img src="https://i.loli.net/2021/12/02/n6QsGTkohbRigqL.jpg" alt="雪景山水图轴.jpg"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/12/02/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <p><img src="https://i.loli.net/2021/12/02/n6QsGTkohbRigqL.jpg" alt="雪景山水图轴.jpg"></p>
+<span id="more"></span>
+<p><strong>Morse code</strong><br>摩斯密码也是一种二进制密码，由”.”和”_”组成，每个英文字母对应不同的编码。<br><img src="https://i.loli.net/2021/12/02/3sHM1zTQjVDvOpy.jpg" alt="6c224f4a20a446237f3f28029522720e0df3d7dd.jpg"></p>
+<p>有时也不一定是”.””_”，这只是一种代表形式而已，如0和1，a和b均可进行加密。<br><strong>Bacon密码</strong><br>培根密码是一种有规律性的秘密，类似于摩斯密码，其密文由ab两种字母来代表，通常题目中会给到两种类型的数据，交替出现，<br>这时我们令第一种为a，第二种为b，然后得到一串ab交替出现的字符串，然后五个五个一组，对照解码表解码即可，比较基础。<br><em>A aaaaa B aaaab C aaaba D aaabb E aabaa F aabab G aabba H aabbb I abaaa</em><br><em>J abaab K ababa L ababb M abbaa N abbab O abbba P abbbb Q baaaa R baaab</em><br><em>S baaba T baabb U babaa V babab W babba X babbb Y bbaaa Z bbaab</em></p>
+<p><strong>当铺密码</strong><br>当铺密码是一种中文密码，它是根据特定汉字的笔画有多少出头来判断的。有多少个出头的笔画，明文就是几。<br>如”果”，对应的明文就是5，”由”对应的明文就是1。</p>
+<p>#Caesar cipher<br>凯撒密码本质上是一种移位密码，明文由26个字母经过设定的移位来加密得到密文，而解密时也只需要输入移位来得到明文。<br><em>例如，明文是a，移位2，就变成了c。解密时，c向前移动2位即可。</em><br>总体来说，凯撒密码原理比较简单，但如何用编程来实现我还在思考</p>
+<p><strong>Pigpen cipher</strong><br>也是一种经典的古典密码，密文符号怪异，非常容易辨识，<br><img src="https://i.loli.net/2021/12/02/okXDANEQigMbtFC.png" alt="CSDN_1638406290616.jpg"></p>
+<p><strong>The rail fence cipher</strong><br>所谓栅栏密码，就是将其分为i组，然后把每组的第一个字连起来。<br>例:加密   <strong>welcome to the crypto</strong><br>welcometothecrypto    <strong>将其分为两组</strong><br>we lc om et ot he cr yp to   <strong>然后将每组的第一个字连起来</strong><br>wloeohcyt  (1)<br>ecmtterpo  (2)<br>解密时，<strong>按照1212的顺序插入进去即可.</strong><br>若是多组，同理操作。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Crypto/" rel="tag"># Crypto</a>
+          
+            <a href="/tags/%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81/" rel="tag"># 古典密码</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/11/29/%E6%B5%8B%E8%AF%95/" rel="next" title="杨超越！！！">
+                <i class="fa fa-chevron-left"></i> 杨超越！！！
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/29/%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼菜鸡的学习日记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/11/29/%E6%B5%8B%E8%AF%95/" itemprop="url">杨超越！！！</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-11-29T15:07:00+08:00">
-                2021-11-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%A8%E8%B6%85%E8%B6%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">杨超越</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><strong>杨超越</strong><br> <img src="https://i.loli.net/2021/12/01/zRpk8s3YUQtIPvW.jpg" alt="1638176131046.jpeg"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -533,152 +419,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/28/my-page/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼菜鸡的学习日记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/11/28/my-page/" itemprop="url">My first page!</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-11-28T22:20:12+08:00">
-                2021-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/first/" itemprop="url" rel="index">
-                    <span itemprop="name">first</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>探头望一望这个世界，你好呀！很高兴遇见你，这是我的第一篇博客，接下来我会持续更新的！</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -686,6 +431,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -900,6 +649,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
