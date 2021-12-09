@@ -88,8 +88,10 @@
 <meta property="og:image" content="https://s2.loli.net/2021/12/06/EMc4iTFjv9Z3Xeh.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/06/mAJRyOkrc1dQXBC.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/06/2VLf5MFArzabpqD.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/09/kIotjsZXNSR1pwl.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/09/zNEPb5RyYOXJm1T.png">
 <meta property="article:published_time" content="2021-12-06T07:22:52.009Z">
-<meta property="article:modified_time" content="2021-12-06T07:22:52.121Z">
+<meta property="article:modified_time" content="2021-12-09T08:32:51.187Z">
 <meta property="article:author" content="WY">
 <meta property="article:tag" content="Buuctf">
 <meta property="article:tag" content="wp">
@@ -364,6 +366,8 @@
 <p><strong>3.变异凯撒</strong><br>凯撒？？？<del>那不是有手就行？</del> 于是我像个傻子一样从0到25一个个试了，后来发现不是，唉！！！<br>又得看别人的题解，我怎么这么菜啊。看完发现原来是ascll码移位啊，原来是这样，于是果断移位，<br>喜滋滋。<strong>看来以后还是要多总结，绝不能死板的套公式！！！</strong><br><img src="https://s2.loli.net/2021/12/06/mAJRyOkrc1dQXBC.png" alt="屏幕截图 2021-12-06 144813.png"></p>
 <p><strong>4.Quoted-printable</strong><br>嗯？又是一种新的编码，<del>快拿小本本记上</del><br><strong>Quoted-printable</strong>，中文名为<strong>可打印字符引用编码</strong>，即任何8-bit字节值可编码为3个字符：<br>一个等号”=”后跟随两个十六进制数字(0–9或A–F)表示该字节的数值。<br>例如：等号”=”（十进制值为61）必须表示为”=3D”，“中”表示为=D6=D0。就是将其转化成16进制。<br>转换出来后是个中文我还不敢写。<br><img src="https://s2.loli.net/2021/12/06/2VLf5MFArzabpqD.png" alt="屏幕截图 2021-12-06 150541.png"></p>
 <p><strong>5.篱笆墙的影子</strong><br><em>felhaagv{ewtehtehfilnakgw}</em><br>很明显是栅栏<br>先看第一行 因为题解要套上flag，所以推测是2，<br> f l a g<br>e h a v<br>于是解密可得到：flag{wethinkwehavetheflag}<br>话说为什么有的网页解出来的密码不是这个？？？<br>好奇怪啊。</p>
+<p><strong>丢失的MD5</strong><br>是一个python源代码，跑一遍就行。<br>只不过稍微要改动一下，因为我用的是python3，所以在破解编码后要加上编码类型<br>~~ .encode(‘utf-8’) ~~<br><img src="https://s2.loli.net/2021/12/09/kIotjsZXNSR1pwl.png" alt="屏幕截图 2021-12-06 223519.png"></p>
+<p><img src="https://s2.loli.net/2021/12/09/zNEPb5RyYOXJm1T.png" alt="屏幕截图 2021-12-06 223533.png"></p>
 
       
     </div>
