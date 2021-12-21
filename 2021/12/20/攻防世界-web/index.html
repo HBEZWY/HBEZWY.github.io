@@ -90,8 +90,14 @@
 <meta property="og:image" content="https://s2.loli.net/2021/12/21/Oye46qjr8Ka2B7g.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/21/z8Ny3spuCH9rcYG.png">
 <meta property="og:image" content="https://s2.loli.net/2021/12/21/1WiKRXlrHaIePM9.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/uaU64OKkxvPtLpE.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/x6TMIfbCpZAl4ce.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/2hFXxjnlypkbuKf.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/6YHEhJ4TVBOue7Q.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/3f1NF69ERiMKjZq.png">
+<meta property="og:image" content="https://s2.loli.net/2021/12/21/z2xRj53UB6p1YdX.png">
 <meta property="article:published_time" content="2021-12-20T15:05:31.460Z">
-<meta property="article:modified_time" content="2021-12-21T00:32:33.075Z">
+<meta property="article:modified_time" content="2021-12-21T02:09:32.096Z">
 <meta property="article:author" content="WY">
 <meta property="article:tag" content="wp">
 <meta property="article:tag" content="攻防世界">
@@ -315,7 +321,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-12-21T08:32:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2021-12-21T10:09:32+08:00">
                 2021-12-21
               </time>
             
@@ -374,6 +380,9 @@
         <p><img src="https://s2.loli.net/2021/12/21/K7vwu2Le1Q6hxbU.jpg" alt="1536a1ad880511ebb6edd017c2d2eca2.jpg"></p>
 <span id="more"></span>
 <p><strong>1.weak_auth</strong><br>这道题是一道弱口令的题目，很显然是用burp爆破，但这不是这道题的重点，重点时我们如何<br>用burp进行爆破。<br>首先我们先截断，然后开始进行爆破。<br><img src="https://s2.loli.net/2021/12/21/lEWYPbCIUhHujKr.png" alt="屏幕截图 2021-12-20 230033.png"><br>接着选中密码，选好字典，开始攻击，发现和初始密码不一样的即为登录密码。选中时<del>$$</del>，<br>这个为选中，记得把用户名那个给去掉，否则攻击的就是用户名了。<br><img src="https://s2.loli.net/2021/12/21/FeC5hiRWT8PEGS9.png" alt="屏幕截图 2021-12-20 230051.png"><br><img src="https://s2.loli.net/2021/12/21/Oye46qjr8Ka2B7g.png" alt="屏幕截图 2021-12-20 230142.png"><br><img src="https://s2.loli.net/2021/12/21/z8Ny3spuCH9rcYG.png" alt="屏幕截图 2021-12-20 230231.png"><br><img src="https://s2.loli.net/2021/12/21/1WiKRXlrHaIePM9.png" alt="屏幕截图 2021-12-20 230301.png"><br>对了，这道题是已知用户名为admin.</p>
+<p><strong>2.simple php</strong><br>查看源代码是php弱类型，我们需要传入两个参数a和b，并且a为0，b不为0且大于1234.<br>那么直接构造就好了.<br><img src="https://s2.loli.net/2021/12/21/uaU64OKkxvPtLpE.png" alt="屏幕截图 2021-12-21 085634.png"><br><img src="https://s2.loli.net/2021/12/21/x6TMIfbCpZAl4ce.png" alt="屏幕截图 2021-12-21 085649.png"><br>当然这不是这道题的重点，我们需要透过现象看本质，了解为什么要构造这么两个数进去.<br>PHP的基本语法手册当一个字符串当作一个数值来取值，其结果和类型如下:<del>如果该字符串没有包含’.’ ‘e’ ‘E’ ~~<br>~~并且其数值值在整形的范围之内,该字符串被当作int来取值，其他所有情况下都被作为float来取值，</del><br>该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，则使用该数值，否则其值为0如：<br>“0e11””0e22”比较的时候，会将这类字符串识别为科学技术法的数字，所以0的多少次方都是零。<br>“A”==0比较的时候，会将A转化成数值，强制转化,由于A是字符串，转化的结果是0自然和0相等。<br>“1A”==1比较的时候会将1A转化成为数值1；但“A1“==1结果却为false，也就是”A1”转化成了0。</p>
+<p><strong>3.webshell</strong><br>很明显是一句话密码，直接菜刀连<br><img src="https://s2.loli.net/2021/12/21/2hFXxjnlypkbuKf.png" alt="屏幕截图 2021-12-21 091320.png"><br><img src="https://s2.loli.net/2021/12/21/6YHEhJ4TVBOue7Q.png" alt="屏幕截图 2021-12-21 091113.png"></p>
+<p><strong>4.xff_referer</strong><br><del>xff:</del> 是X-Forwarded-For的简写，用来识别通过HTTP代理或负载均衡方式连接到Web服务器的客户端<br>最原始的IP地址的HTTP请求头字段。<br><del>referer</del>:是告诉服务器我是从哪个地方来的<br>我们直接构造即可，用burp发送请求<br><img src="https://s2.loli.net/2021/12/21/3f1NF69ERiMKjZq.png" alt="屏幕截图 2021-12-21 093941.png"><br><img src="https://s2.loli.net/2021/12/21/z2xRj53UB6p1YdX.png" alt="屏幕截图 2021-12-21 094210.png"></p>
 
       
     </div>
